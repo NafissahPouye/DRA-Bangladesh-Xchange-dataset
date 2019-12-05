@@ -10,10 +10,9 @@ selectedKeyVars <- c(col[2], col[3], col[4])
 weights <- c(col[38])
 
 #Convert variables into factors
-#cols =  c(col[2], col[3], col[4])
 data[,selectedKeyVars] <- lapply(data[,selectedKeyVars], factor)
 
-# Convert the sub file into dataframe
+#Convert subfile into dataframe
 subVars <- c(selectedKeyVars, weights)
 fileRes<-data[,subVars]
 fileRes <- as.data.frame(fileRes)
